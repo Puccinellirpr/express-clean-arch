@@ -1,8 +1,10 @@
 const express = require('express')
 const mysql = require('mysql');
-const app = express()
+
 
 const port = 8080
+const app = express()
+app.use(express.json());
 
 app.post('/user', (req,res)=> {
     const {username, password} = req.body
