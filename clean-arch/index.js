@@ -7,11 +7,11 @@ const app = express()
 
 app.use(express.json());
 
-app.post('/user', async (req,res)=> {
+app.post('/user', (req,res)=> {
     const {username, password} = req.body
 
     try {
-    const user = await createUser({username, password})
+    const user = createUser({username, password})
     res.json({
         data: {
             ...user

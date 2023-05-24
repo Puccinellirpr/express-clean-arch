@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 
-module.exports = async (user) => {
+module.exports = (user) => {
     let dbConnection = mysql.createConnection({
         host: "localhost",
         user: "yourusername",
@@ -8,7 +8,7 @@ module.exports = async (user) => {
     });
     
     dbConnection.connect()    
-    const dbResult = await dbConnection.query(`
+    const dbResult = dbConnection.query(`
         INSERT INTO users (username, password)
         VALUES (${user.username}, ${user.password});
     `, (error)=> {
