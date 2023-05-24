@@ -6,7 +6,7 @@ module.exports = class User {
 
     validate() {
         if(this.password.length < 6) {
-            throw new Error ('Invalid passwordl')
+            throw new Error ('Invalid password!')
         }
     }
 }
