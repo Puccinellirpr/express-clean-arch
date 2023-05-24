@@ -1,10 +1,11 @@
 const express = require('express')
-const mysql = require('mysql');
-const app = express()
-const User = require('./entities/user')
 const createUser = require('./use-cases/createUser.js')
 
+
 const port = 8080
+const app = express()
+
+app.use(express.json());
 
 app.post('/user', async (req,res)=> {
     const {username, password} = req.body

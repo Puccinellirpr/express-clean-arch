@@ -2,14 +2,15 @@
   "name": "express-clean-arch",
   "version": "1.0.0",
   "description": "",
-  "main": "initial/index.js",
+  "main": "clean-arch/index.js",
   "scripts": {
-    "start": "node initial/index.js",
+    "start": "node clean-arch/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
   }
 }
